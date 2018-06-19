@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Car Database Application</h1>
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/app/car-controller.js"></script>
+    <link href="Site.css" type="text/css" rel="stylesheet">
+
+    <div align="center" ng-app="CarApp" ng-controller="CarCtrl">
+        <div class="dataTable">
+            <table class="dataTable">
+                <tr>
+                    <th class="dataColumn"><button ng-click="orderID()">Id</button></th>
+                    <th class="dataColumn"><button ng-click="orderYear()">Production Year</button></th>
+                    <th class="dataColumn"><button ng-click="orderBrand()">Brand </button></th>
+                </tr>
+
+                <tr ng-repeat="car in carsView"
+                    ng-cloak
+                    ng-class-even="'evenRow'"
+                    ng-class-odd="'oddRow'">
+                    <td class="dataColumn">{{car.Id}}  </td>
+                    <td class="dataColumn">{{car.ProductionYear}}</td>
+                    <td class="dataColumn"> {{car.Brand}} </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
