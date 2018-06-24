@@ -1,22 +1,39 @@
 ﻿var app = angular.module("CarApp", []);
 //Angular Script that will get the data from the API model Car.cs in ~/WebApplicatio1/Models/Car.cs
-app.controller("CarCtrl", function ($scope, $http) {
 
-    $scope.a = "w00t";
-    var carsURL = "http://localhost:56206/api/Car/";//URL of the CarControler
+app.service("dataService", function ($http) {
+    //URL of the CarControler
+    var result;
+    this.retrieveData = function () {
+
+        result = $http.get("http://localhost:56206/api/Car/").then(function (response) {
+            return response;
+        });
+        console.log(result);
+        return result;
+    };
+});
+
+    app.controller("CarCtrl", ["dataService", "$scope", "$http", function (dataService, $scope, $http) {
+    //variables used to change beetween sorting in ascendent or descendent order
     var listIsOrderedYear = false;
     var listIsOrderedId = false;
     var listIsOrderedBrand = false;
 
-    //Getting data from CarControler.cs(~/api/Car)and saving it to $scope.cars
-    $http.get(carsURL).then(function (response) {
+
+    dataService.retrieveData().then(function (response) {
         $scope.cars = response.data;
         $scope.carsView = response.data;
     });
+    console.log($scope.cars);
+    console.log($scope.carsView+"View");
 
-    //--------------------------------------------Search method---------------------------------------------------
+
+ 
 
     //-------------------------------------------orderBrand Method------------------------------------------------
+
+
     $scope.orderBrand = function () {
 
         listIsOrderedBrand = !listIsOrderedBrand;
@@ -26,7 +43,7 @@ app.controller("CarCtrl", function ($scope, $http) {
         } else {
             $scope.carsView = mergeSortBrand($scope.cars);
         }
-    }
+    };
 
     //------------------------------------------------------orderId Method-----------------------------------------------------
     $scope.orderID = function () {
@@ -38,18 +55,18 @@ app.controller("CarCtrl", function ($scope, $http) {
         } else {
             $scope.carsView = $scope.cars;
         }
-    }
+    };
     //-------------------------------------------------------orderYear Method-------------------------------------------------- 
     $scope.orderYear = function () {
 
         listIsOrderedYear = !listIsOrderedYear;
 
         if (listIsOrderedYear) {
-            $scope.carsView = reverseArray(mergeSortYear($scope.cars))
+            $scope.carsView = reverseArray(mergeSortYear($scope.cars));
         } else {
-            $scope.carsView = mergeSortYear($scope.cars)
+            $scope.carsView = mergeSortYear($scope.cars);
         }
-    }
+    };
 
     //-------------------------------------------------------reverseArray Method-------------------------------------------------- 
     function reverseArray(arr) {
@@ -66,7 +83,7 @@ app.controller("CarCtrl", function ($scope, $http) {
         if (arr.length === 1) {
             // return once we hit an array with a single item
             return arr;
-        };
+        }
 
         const middle = Math.floor(arr.length / 2); // get the middle item of the array rounded down
         const left = arr.slice(0, middle); // items on the left side
@@ -75,7 +92,7 @@ app.controller("CarCtrl", function ($scope, $http) {
         return mergeYear(
             mergeSortYear(left),
             mergeSortYear(right)
-        )
+        );
     }
 
     // compare the arrays item by item and return the concatenated result
@@ -94,7 +111,7 @@ app.controller("CarCtrl", function ($scope, $http) {
                 indexRight++;
             }
         }
-        return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight))
+        return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight));
     }
 
     //--------------------------------------------------------------mergeSortBrand Method-------------------------------------------
@@ -104,7 +121,7 @@ app.controller("CarCtrl", function ($scope, $http) {
         if (arr.length === 1) {
             // return once we hit an array with a single item
             return arr;
-        };
+        }
 
         const middle = Math.floor(arr.length / 2); // get the middle item of the array rounded down
         const left = arr.slice(0, middle); // items on the left side
@@ -113,7 +130,7 @@ app.controller("CarCtrl", function ($scope, $http) {
         return mergeBrand(
             mergeSortBrand(left),
             mergeSortBrand(right)
-        )
+        );
     }
 
     // compare the arrays item by item and return the concatenated result
@@ -124,7 +141,7 @@ app.controller("CarCtrl", function ($scope, $http) {
 
         while (indexLeft < left.length && indexRight < right.length) {
 
-            if (left[indexLeft].Brand < right[indexRight].Brand) {
+            if (left[indexLeft].Brand.toUpperCase() < right[indexRight].Brand.toUpperCase()) {
                 result.push(left[indexLeft]);
                 indexLeft++;
             } else {
@@ -133,7 +150,7 @@ app.controller("CarCtrl", function ($scope, $http) {
             }
         }
 
-        return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight))
+        return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight));
     }
 
-});
+}]);

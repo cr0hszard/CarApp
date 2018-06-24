@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Add a car</title>
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="../Scripts/app/addCar-controller.js"></script>
+
+</head>
+
+<body ng-app="EditCar" ng-controller="AddCar">
+    <h1>Add a Car</h1>
+    <p><a href="Index.html">Home Page</a></p>
+    <form>
+        <p>Car Brand:<input type="text" ng-model="Brand" /></p>
+        <p>Car Production Year:<input type="number" ng-model="ProductionYear" /></p>
+        <p><input type="submit" value="Add car" ng-click="addCar()" /></p>
+    </form>
+    <div id="Check"></div>
+</body>
+</html>

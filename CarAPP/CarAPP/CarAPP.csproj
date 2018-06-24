@@ -68,11 +68,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Frontend\addCar.html" />
+    <Content Include="Frontend\addCarStyle.css" />
+    <Content Include="Frontend\car.html" />
     <Content Include="Frontend\Index.html" />
     <Content Include="Frontend\IndexStyle.css" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\app\addCar-controller.js" />
     <Content Include="Scripts\app\car-controller.js" />
     <Content Include="Web.config" />
   </ItemGroup>

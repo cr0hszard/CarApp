@@ -1,4 +1,5 @@
 ﻿body {
+    align-content:center;
 }
 body {
     padding-top: 15px;
@@ -13,7 +14,7 @@ textarea {
 }
 
 h1 {
-    align-content: center;
+    text-align: center;
 }
 
 .dataTable {
