@@ -1,20 +1,8 @@
-﻿var app = angular.module("CarApp", []);
+﻿var app = angular.module("CarApp", ["getCar"]);
 //Angular Script that will get the data from the API model Car.cs in ~/WebApplicatio1/Models/Car.cs
 
-app.service("dataService", function ($http) {
-    //URL of the CarControler
-    var result;
-    this.retrieveData = function () {
 
-        result = $http.get("http://localhost:56206/api/Car/").then(function (response) {
-            return response;
-        });
-        console.log(result);
-        return result;
-    };
-});
-
-    app.controller("CarCtrl", ["dataService", "$scope", "$http", function (dataService, $scope, $http) {
+app.controller("CarCtrl", ["dataService", "$scope", function (dataService, $scope) {
     //variables used to change beetween sorting in ascendent or descendent order
     var listIsOrderedYear = false;
     var listIsOrderedId = false;
@@ -26,10 +14,10 @@ app.service("dataService", function ($http) {
         $scope.carsView = response.data;
     });
     console.log($scope.cars);
-    console.log($scope.carsView+"View");
+    console.log($scope.carsView + "View");
 
 
- 
+
 
     //-------------------------------------------orderBrand Method------------------------------------------------
 

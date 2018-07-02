@@ -71,13 +71,18 @@
     <Content Include="Frontend\addCar.html" />
     <Content Include="Frontend\addCarStyle.css" />
     <Content Include="Frontend\car.html" />
+    <Content Include="Frontend\HomePage.html" />
     <Content Include="Frontend\Index.html" />
-    <Content Include="Frontend\IndexStyle.css" />
+    <Content Include="Frontend\carStyle.css" />
+    <Content Include="Frontend\indexRouting.js" />
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app\addCar-controller.js" />
     <Content Include="Scripts\app\car-controller.js" />
+    <Content Include="Scripts\app\getCar-service.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +91,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

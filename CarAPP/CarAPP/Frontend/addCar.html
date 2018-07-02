@@ -3,19 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <title>Add a car</title>
-    <script src="../Scripts/angular.min.js"></script>
-    <script src="../Scripts/app/addCar-controller.js"></script>
-
+    <link href="addCarStyle.css" type="text/css" rel="stylesheet">
 </head>
 
-<body ng-app="EditCar" ng-controller="AddCar">
-    <h1>Add a Car</h1>
-    <p><a href="Index.html">Home Page</a></p>
-    <form>
-        <p>Car Brand:<input type="text" ng-model="Brand" /></p>
-        <p>Car Production Year:<input type="number" ng-model="ProductionYear" /></p>
-        <p><input type="submit" value="Add car" ng-click="addCar()" /></p>
+<body  ng-app="EditCar" ng-controller="AddCar">
+    <h1 class="Header">Add a Car</h1>
+    <form  action="Index.html">
+        <button  class="addInput">Home Page</button>
     </form>
+    
+    <div align="center" class="addDiv">
+        <form class="addForm">
+            <p>Car Brand:<input class="addInput" type="text" ng-model="Brand" /></p>
+            <p>Car Production Year:<input class="addInput" type="number" ng-model="ProductionYear" /></p>
+            <div id="Check"></div>
+            <p><input class="addInput" type="submit" value="Add car" ng-click="addCar()" /></p>
+
+        </form>
+    </div>
     <div id="Check"></div>
 </body>
 </html>

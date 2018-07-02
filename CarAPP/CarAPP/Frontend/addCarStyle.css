@@ -1,3 +1,29 @@
 ﻿body {
-    align-content:center;
+   
+    text-align: center;
+    background-color: rgb(199, 218, 236);
+}
+.Header{
+    text-align: center;
+    width:100%;
+    color: rgb(12, 86, 155);
+}
+.addDiv{
+    width:100%;
+}
+.addForm{
+    width: 400px;
+    border-style: solid;
+    background-color: rgb(179, 206, 231);
+    color: rgb(12, 86, 155);
+    border-radius: 10px;
+      
+}
+.addInput{
+    background-color:rgb(199, 218, 236);
+    color: rgb(12, 86, 155);
+    border-style: solid;
+    border-radius: 5px;
+    border-color:rgb(55, 110, 161);
+    margin:5px;
 }

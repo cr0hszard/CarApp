@@ -6,18 +6,16 @@
 </head>
 <body>
     <h1>Car Database Application</h1>
-    <script src="../Scripts/angular.min.js"></script>
-    <script src="../Scripts/app/car-controller.js"></script>
-    <link href="IndexStyle.css" type="text/css" rel="stylesheet">
 
-    <p><a href="Index.html">Home Page</a></p>
+    <link href="carStyle.css" type="text/css" rel="stylesheet">
+
     <div align="center" ng-app="CarApp" ng-controller="CarCtrl">
         <div class="dataTable">
             <table class="dataTable">
                 <tr>
-                    <th class="dataColumn"><button ng-click="orderID()">Id</button></th>
-                    <th class="dataColumn"><button ng-click="orderYear()">Production Year</button></th>
-                    <th class="dataColumn"><button ng-click="orderBrand()">Brand </button></th>
+                    <th class="dataColumn"><button class="button" ng-click="orderID()">Id</button></th>
+                    <th class="dataColumn"><button class="button" ng-click="orderYear()">Production Year</button></th>
+                    <th class="dataColumn"><button class="button" ng-click="orderBrand()">Brand </button></th>
                 </tr>
 
                 <tr ng-repeat="car in carsView"
@@ -34,7 +32,7 @@
 
         </div>
     </div>
-
+  
 </body>
 
 </html>

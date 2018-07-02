@@ -1,12 +1,30 @@
 ﻿<!DOCTYPE html>
-<html>
+<html >
 <head>
     <meta charset="utf-8" />
     <title>CarApp Homepage</title>
-</head>
-<body>
-    <p> <a href="addCar.html">AddCar</a></p>
-    <p> <a href="car.html">CarDatabase</a></p>
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/angular-route.js"></script>
+    <script src="indexRouting.js"></script>
+    <script src="../Scripts/app/addCar-controller.js"></script>
+    <script src="../Scripts/app/car-controller.js"></script>
 
+</head>
+
+<body ng-app="indexRouting">
+    <table>
+        <tr>
+            <th><a href="#!addCar"> a car</a></th>
+            <th><a href="#/!">Home Page</a></th>
+            <th><a href="#!listCar">Car List</a></th>
+        </tr>
+
+    </table>
+
+    <div ng-view></div>
+   
 </body>
+
+
+
 </html>
