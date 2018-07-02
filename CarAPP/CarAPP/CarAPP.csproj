@@ -72,9 +72,11 @@
     <Content Include="Frontend\addCarStyle.css" />
     <Content Include="Frontend\car.html" />
     <Content Include="Frontend\HomePage.html" />
+    <Content Include="Frontend\HomePageStyle.css" />
     <Content Include="Frontend\Index.html" />
     <Content Include="Frontend\carStyle.css" />
     <Content Include="Frontend\indexRouting.js" />
+    <Content Include="Frontend\IndexStyle.css" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />

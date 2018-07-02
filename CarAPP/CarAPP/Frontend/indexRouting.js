@@ -1,5 +1,5 @@
 ﻿var Indexrouter = angular.module("indexRouting", ["ngRoute","CarApp","EditCar"]);
-
+//Router for the Index.htmlpage
 Indexrouter.config(function ($routeProvider) {
     $routeProvider
         .when("/", {

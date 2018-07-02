@@ -14,7 +14,7 @@
 .addForm{
     width: 400px;
     border-style: solid;
-    background-color: rgb(179, 206, 231);
+    background-color: rgb(124, 181, 235);
     color: rgb(12, 86, 155);
     border-radius: 10px;
       
@@ -24,6 +24,6 @@
     color: rgb(12, 86, 155);
     border-style: solid;
     border-radius: 5px;
-    border-color:rgb(55, 110, 161);
+    border-color:rgb(12, 86, 155);
     margin:5px;
 }
