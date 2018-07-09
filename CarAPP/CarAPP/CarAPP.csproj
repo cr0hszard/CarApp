@@ -68,13 +68,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Frontend\addCar.html" />
-    <Content Include="Frontend\addCarStyle.css" />
-    <Content Include="Frontend\car.html" />
-    <Content Include="Frontend\HomePage.html" />
-    <Content Include="Frontend\HomePageStyle.css" />
+    <Content Include="Frontend\Pages\addCar.html" />
+    <Content Include="Frontend\Styles\addCarStyle.css" />
+    <Content Include="Frontend\Pages\car.html" />
+    <Content Include="Frontend\Pages\HomePage.html" />
+    <Content Include="Frontend\Styles\HomePageStyle.css" />
     <Content Include="Frontend\Index.html" />
-    <Content Include="Frontend\carStyle.css" />
+    <Content Include="Frontend\Styles\carStyle.css" />
     <Content Include="Frontend\indexRouting.js" />
     <Content Include="Frontend\IndexStyle.css" />
     <Content Include="Scripts\angular-mocks.js" />
@@ -82,9 +82,10 @@
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\app\addCar-controller.js" />
-    <Content Include="Scripts\app\car-controller.js" />
-    <Content Include="Scripts\app\getCar-service.js" />
+    <Content Include="Scripts\app\controllers\addCar-controller.js" />
+    <Content Include="Scripts\app\controllers\car-controller.js" />
+    <Content Include="Scripts\app\services\ApiCom-service.js" />
+    <Content Include="Scripts\app\services\Sorting-service.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

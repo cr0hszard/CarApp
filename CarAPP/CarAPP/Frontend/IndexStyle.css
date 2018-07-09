@@ -1,29 +1,34 @@
 ﻿body {
-   align-content: center;
+    align-content: center;
     text-align: center;
     background-color: rgb(199, 218, 236);
 }
-h1{
+
+h1 {
     text-align: center;
-    width:100%;
+    width: 100%;
     color: rgb(12, 86, 155);
 }
-.navBar{
-text-align: center;
-align-content: center;
-width: 100%;
+
+.navBar {
+    text-align: center;
+    align-content: center;
+    width: 100%;
 }
-.navBarButton{
-    background-color:  rgb(179, 206, 231);
-    color: rgb(38, 82, 122);
+
+.navBarButton {
+    background-color: rgb(179, 206, 231);
     border-style: solid;
     border-radius: 5px;
     font-size: 25px;
-    border-color:rgb(12, 86, 155);
-    margin:5px;
-    width:33%;
+    border-color: rgb(12, 86, 155);
+    margin: 5px;
+    width: 33%;
     text-decoration: none;
+    border-width: 1.5px;
 }
-a{
+
+.navBarLink {
     text-decoration-line: none;
+    color: rgb(12, 86, 155);
 }

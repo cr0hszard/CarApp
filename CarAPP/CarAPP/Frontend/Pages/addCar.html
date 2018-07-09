@@ -3,16 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <title>Add a car</title>
-    <link href="addCarStyle.css" type="text/css" rel="stylesheet">
+    <link href="Styles/addCarStyle.css" type="text/css" rel="stylesheet">
 </head>
 
 <body  ng-app="EditCar" ng-controller="AddCar">
-    <h1 class="Header">Add a Car</h1>
-    <form  action="Index.html">
-        <button  class="addInput">Home Page</button>
-    </form>
-    
+    <h1 class="Header">Add a Car</h1>    
+   
     <div align="center" class="addDiv">
+       
         <form class="addForm">
             <p>Car Brand:<input class="addInput" type="text" ng-model="Brand" /></p>
             <p>Car Production Year:<input class="addInput" type="number" ng-model="ProductionYear" /></p>
@@ -20,7 +18,10 @@
             <p><input class="addInput" type="submit" value="Add car" ng-click="addCar()" /></p>
 
         </form>
+
     </div>
+
     <div id="Check"></div>
+
 </body>
 </html>

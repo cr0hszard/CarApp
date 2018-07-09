@@ -1,29 +1,31 @@
 ﻿<!DOCTYPE html>
-<html >
+<html>
 <head>
     <meta charset="utf-8" />
     <title>CarApp Homepage</title>
     <script src="../Scripts/angular.js"></script>
     <script src="../Scripts/angular-route.js"></script>
     <script src="indexRouting.js"></script>
-    <script src="../Scripts/app/addCar-controller.js"></script>
-    <script src="../Scripts/app/car-controller.js"></script>
-    <script src="../Scripts/app/getCar-service.js"></script>
+    <script src="../Scripts/app/services/ApiCom-service.js"></script>
+    <script src="../Scripts/app/services/Sorting-service.js"></script>
+    <script src="../Scripts/app/controllers/addCar-controller.js"></script>
+    <script src="../Scripts/app/controllers/car-controller.js"></script>
+
     <link href="IndexStyle.css" type="text/css" rel="stylesheet">
 </head>
 
 <body ng-app="indexRouting">
     <table class="navBar">
         <tr>
-            <th class="navBarButton"><a href="#/!">Home Page</a></th>
-            <th class="navBarButton"><a href="#!addCar"> Add a car</a></th>
-            <th class="navBarButton"><a href="#!listCar">Car List</a></th>
+            <th class="navBarButton"><a class="navBarLink" href="#/!">Home Page</a></th>
+            <th class="navBarButton"><a class="navBarLink" href="#!addCar"> Add a car</a></th>
+            <th class="navBarButton"><a class="navBarLink" href="#!listCar">Car List</a></th>
         </tr>
 
     </table>
 
     <div ng-view></div>
-   
+
 </body>
 
 
